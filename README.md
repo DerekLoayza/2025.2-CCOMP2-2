@@ -1,7 +1,7 @@
-#2025.3-CCOMP2-2
+2025.3-CCOMP2-2
 
-#Derek Loayza h
+Derek Loayza
 
-#Estoy feliz de estar en este curso
+Estoy feliz de estar en este curso
 
-#20/08/2025
+20/08/2025
