@@ -66,19 +66,19 @@ int main()
         j++;
     }
 //Escribe un programa que pida un numero (3 a 9 digitos) y evalua si el numero es un palindromo
-    int a, a_invertida;
-    cout << "\nDame un numero de 3 a 9 digitos\n";
+    int a, a_invertida=0;
+    cout << "Dame un numero de 3 a 9 digitos\n";
     cin >> a;
-    while (0<a){
+    int original = a;
+    while (a>0){
         int digito =a%10;
-        a_invertida=a_invertida + digito;
+        a_invertida=a_invertida*10 + digito;
         a=a/10; }
-    if (a == a_invertida){
-        cout << a << "Es palindromo\n"; }
+    if (original == a_invertida){
+        cout << original  << " Es palindromo\n"; }
     else {
-        cout << a << "No es palindromo\n";                     //PORQUE ME SALE UN 0 ACA, ADEMAS HACERLO ACA CON FOR Y WL PRIMO TAMBIEN
+        cout << original << " No es palindromo\n";                     //PORQUE ME SALE UN 0 ACA, ADEMAS HACERLO ACA CON FOR Y WL PRIMO TAMBIEN
     }
-
 /*Bucle FOR
     for (inicia una variable {si ya esta iniciada lo dejas en blanco} ; condicion ; incrementacion)
         instruccion 1
