@@ -31,21 +31,9 @@ int main()
             cout << "No es palindromo " << endl;
             break;}
     }
-    if (contador==a){
+    if (contador==cadena.length()/2){
         cout << "Es palindromo"<< endl;                    //MEJORAR ESTO PARA QUE ESTE DENTRO DEL IF DEL PALINDROMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
     }
-//Inplementa una funcion que reciba dos numeros e intercambia sus valores
-    void intercambiar(int &a, int &b) {                              //ESTA FUNCION VA ANTES DEL MAIN YEAAAAAAHH
-        int temporal = a;
-        a = b;
-        b = temporal;
-    }
-
-    int x = 5, y = 10;
-    std::cout << "Valores antes del intercambio: x = " << x << ", y = " << y << std::endl;
-
-    intercambiar(x, y);
-    std::cout << "Valores después del intercambio: x = " << x << ", y = " << y << std::endl;
 
     return 0;
 }

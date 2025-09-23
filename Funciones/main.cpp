@@ -44,11 +44,12 @@ using namespace std;
         cout << "La cantidad de digitos que tiene tu numero es: " << contador << endl;
     }
 
-
-
-
-
-
+//Inplementa una funcion que reciba dos numeros e intercambia sus valores
+    void intercambiar(int &a, int &b) {
+        int temporal = a;
+        a = b;
+        b = temporal;
+    }
 
 
 int main()
@@ -65,7 +66,7 @@ int main()
 
 //Para imprimir cierta cantidad de primos se pone:
     int i=2;
-    while (i < 100){
+    while (i < 50){
         if (esPrimo(i))
             cout << i << " ";
         i++;
@@ -73,8 +74,17 @@ int main()
     cout << endl;
 
 //El anterior codigo se reemplaza con esta nueva funcion de imprimirNPrimos
-    imprimirNPrimos(100);
+    imprimirNPrimos(50);
 
     contarDigitos(14652);
+
+
+    int x = 5, y = 10;
+    cout << "Valores antes del intercambio: x = " << x << ", y = " << y << endl;
+
+    intercambiar(x, y);
+    cout << "Valores después del intercambio: x = " << x << ", y = " << y << endl;
+
+
     return 0;
 }
