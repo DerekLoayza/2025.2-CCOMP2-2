@@ -5,16 +5,17 @@ using namespace std;
 //Implementa una funcion que reciba un arreglo de enteros y su tamaño y retorne la suma de los elementos del arreglo
     long sumar(int arr[], int tamano) {
         long sum = 0;
-    for (int i = 0; i < tamano; i++) {
-        sum = sum + arr[i]; }
-    return sum; }
-//Una funcion recursiva que de la suma de un arreglo
+        for (int i = 0; i < tamano; i++) {
+            sum = sum + arr[i]; }
+        return sum; }
+//Una funcion RECURSIVA que de la suma de un arreglo
     long sumaArreglo(int arr[], int tamano){             //VER ESTE EJERCICIO CON CASO BASE 0
         long suma=0;
-        if (tamano == 0)
-            return 0;
+        if (tamano == 1)
+            return arr[0];
         else
             return arr[tamano-1]+sumaArreglo(arr, tamano-1 ); }
+
 //Implementa una funcion que invierta los elementos de un arreglo
     void invertir(int arr[], int tamano){
         for(int i=0, j=tamano-1; i < j; i++ , j--){
@@ -25,22 +26,30 @@ using namespace std;
 
     void invertirArreglo(int arr[], int tamano, int i=0){
         if (i>tamano)
-            return ;                         //Aca porque no retorna nadaaaaaaaaaaa
+            return ; //Aca no retorna nada porque la f es void, solo modifica el arreglo directamente
         else{
             int temp =arr[i];
             arr[i]= arr[tamano-1];
             arr[tamano-1]=temp;
             invertirArreglo(arr, tamano-1,i+1);  }}
 
+
+
+
 int main(){
     //Un arreglo es un conjunto de elementos del mismo almacenados en memoria de forma consecutiva
     int arreglo[5]={10, 20, 30, 40, 50}; //Puedes poner un cout para caga [x] del arreglo para verlo
     cout << "La suma es " << sumar(arreglo, 5) << endl;
+    cout << sumaArreglo(arreglo, 5)<< endl;
+    invertir(arreglo, 5);
+    invertirArreglo(arreglo,5);
 
-/*ejercicio recursivo*/ cout << sumaArreglo(arreglo, 5)<< endl;
-/*ejercicio invertir*/  invertir(arreglo, 5);
-                        invertirArreglo(arreglo,5);                       //Averiguar como imprimirlooooooooooooooo
-                        //Hacer lo mismo pero con swap
+    int tamano=5;
+    for (int i = 0; i < tamano; i++)
+    cout << arreglo[i] << " ";
+
+
+
 
 
 // Crear una matriz 4x4 con letras mayusculas arriba a la izquierda, minusculas abajo a la derechay numeros arriba a la derecha y abajo a la izquierda
