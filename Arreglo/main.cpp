@@ -23,15 +23,29 @@ using namespace std;
             arr[i]=arr[j];
             arr[j]=tmp;
         } }
-
-    void invertirArreglo(int arr[], int tamano, int i=0){
-        if (i>tamano)
+//Invierte los elementos de un arr RECURSIVAMENTE
+    void invertirArreglo(int arreglo[], int inicio, int fin){
+        if (inicio>=fin)
             return ; //Aca no retorna nada porque la f es void, solo modifica el arreglo directamente
         else{
-            int temp =arr[i];
-            arr[i]= arr[tamano-1];
-            arr[tamano-1]=temp;
-            invertirArreglo(arr, tamano-1,i+1);  }}
+            int temp =arreglo[inicio];
+            arreglo[inicio] = arreglo[fin];
+            arreglo[fin] = temp;
+            invertirArreglo(arreglo, inicio + 1, fin - 1);  }}
+/*Invierte un arreglo con swap
+void invertir(int arreglo[], int inicio, int fin) {
+    // si llega a la mitad del arreglo, no da nada
+    if (inicio >= fin) {
+        return;
+    }
+
+    // Intercambiamos el elemento del inicio con el del fin
+    // std::swap es más legible y seguro que la implementación manual.
+    swap(arreglo[inicio], arreglo[fin]);
+
+    // Llamada Recursiva: Movemos los índices hacia el centro
+    invertir(arreglo, inicio + 1, fin - 1); }
+ */
 
 
 
@@ -42,7 +56,8 @@ int main(){
     cout << "La suma es " << sumar(arreglo, 5) << endl;
     cout << sumaArreglo(arreglo, 5)<< endl;
     invertir(arreglo, 5);
-    invertirArreglo(arreglo,5);
+    int size= sizeof(arreglo)/sizeof(arreglo[0]);
+    cout <<invertirArreglo(arreglo,0,size-1);//INVERTIR RECURSIVAMENTE
 
     int tamano=5;
     for (int i = 0; i < tamano; i++)

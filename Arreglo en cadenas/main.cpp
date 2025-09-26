@@ -11,11 +11,11 @@ int longitud(char cad[]){
 
 int main()
 {
-    int arr[]={10, 20, 30, 40, 50}
+    int arr[]={10, 20, 30, 40, 50};
     char cad1[]={'c','i','e','n','c','i','a'};
-    char cad2[]= "ciencia de la computacion";
+    char cad2[] = "ciencia";
 
-    cour << arr << endl; //Esto no imprime todo el arreglo, averiguar como hacerlo sin usar una funcion
+    cout << arr << endl; //Esto no imprime todo el arreglo, averiguar como hacerlo sin usar una funcion
 
     cout << cad1 << endl;
     cout << cad2 << endl;
