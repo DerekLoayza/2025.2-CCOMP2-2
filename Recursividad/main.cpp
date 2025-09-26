@@ -28,38 +28,29 @@ using namespace std;
        return 1 + contarDigitos(x/10); }
 
 //Da un numero y verifica si es capicua (Si es palindromo)
-    bool capicua(long x){
-    if (x<10)
-        return true;
-    else{
-        long digFinal = x % 10;   // último dígito
+   int invertir(int n, int invertido = 0) {
+    if (n == 0) {
+        return invertido;  // caso base
+    } else {
+        return invertir(n / 10, invertido * 10 + (n % 10));
+    }
+    }
 
-        // obtener el primer dígito
-        long copia = x;
-        while (copia >= 10)
-            copia /= 10;
-        long digPrimero = copia;
-
-        if (digPrimero != digFinal)  // si no coinciden
+    bool palindromo(int n) {
+        if (n == invertir(n)) {   // caso base: si es igual al invertido
+            return true;
+        } else {                  // si no lo es
             return false;
-
-        // quitar primer y último dígito
-        long divisor = 1;
-        long temp = x;
-        while (temp >= 10) {   // calcular 10^(numDigitos-1) sin pow
-            temp /= 10;
-            divisor *= 10;
         }
-        long recorte = (x % divisor) / 10;
+    }
 
-        return capicua(recorte); // llamada recursiva
-    } }
 
 int main()
 {
     cout << factorial (5) << endl;
     cout << fibo(3) << endl;
     cout << contarDigitos(1345)<< endl;
-    cout << capicua(1234321)<<endl;
+    cout << palindromo(12415) << endl;   // imprime 0 (no es palÃ­ndromo)
+    cout << palindromo(12321) << endl;   // imprime 1 (sÃ­ es palÃ­ndromo)
     return 0;
 }
