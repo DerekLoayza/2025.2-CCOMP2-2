@@ -20,6 +20,12 @@ int main()
     cout << "El valor de a es: "<< a;
     cout << "\nSu valor es: "<< *aptr<< endl;
 
+    //Puedes cambiar el valor de una variable, como lo hiciste con esta funcion de atras
+    int x=10;
+    int *ptr1=&x;
+    *ptr1=10000;//Aca cambias el valor de x
+    cout << x <<endl;
+
 
     int numero=5;
     cout << numero << endl; // 5
@@ -33,12 +39,6 @@ int main()
         cout << "Los dos tienen el mismo valor" << endl;
     else
         cout << "Nunca debio pasar";
-
-//Puedes cambiar el valor de una variable, como lo hiciste con esta funcion de atras
-    int x=10;
-    int *ptr1=&x;
-    *ptr1=10000;//Aca cambias el valor de x
-    cout << x <<endl;
 
     return 0;
 }
