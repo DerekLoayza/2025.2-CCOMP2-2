@@ -14,55 +14,25 @@ using namespace std;
         *a=*b;
         *b=ayuda; }
 
+
 //Implemente una funcion para invertir los elementos de un arr con punteros
-    void invertirArr (int*ini , int *fin){
-        while(ini<fin){
-            intercambio(ini++,fin--);
-        } }
-    void invertirArrRe (int*ini , int *fin){
-        if (ini>=fin)
-            return;
-        intercambio(ini, fin);
-        invertirArrRe(++ini, --fin); }
-
-/*  // Creo que mejor usas estos
-void invertir(int array[], int tam) {
-    for(int i = 0; i < tam; i++, tam--) {
-        int tmp = array[i];
-        array[i] = array[tam-1];
-        array[tam-1] = tmp;
-    }
-}
-
-void invertirPtr(int *ini, int *fin) {
-    while(ini<=fin) {
-        int tmp = *ini;
+    void invertirArr(int *ini, int *fin) {
+    while (ini < fin) {
+        int ayuda = *ini;
         *ini = *fin;
-        *fin = tmp;
+        *fin = ayuda;
         ini++;
-        fin--;
-    }
-}
-
-void invertirArrRecursivoSimple(int *ini, int *fin) {
-    // CASO BASE: Si el puntero inicial ya pasó o igualó al final, la inversión está completa.
-    if (ini >= fin) {
-        return; }
-
-    // 1. Intercambio de los valores actuales (lógica de tu función 'invertirPtr')
-    int tmp = *ini;
+        fin--; } }
+    //Lo mismo pero recursivamente
+    void reverseArray(int *ini, int *fin) {
+    if (ini >= fin)  
+        return;
+    int ayuda = *ini;
     *ini = *fin;
-    *fin = tmp;
+    *fin = ayuda;
+    reverseArray(ini + 1, fin - 1); }
 
-    // 2. Mover los punteros para la siguiente llamada.
-    //    Usamos postfijo aquí, pero la clave es que la actualización ocurre ANTES
-    //    de que la variable sea usada como argumento en la llamada recursiva.
-    ini++; // El puntero ini se mueve hacia adelante
-    fin--; // El puntero fin se mueve hacia atrás
 
-    // 3. Llamada Recursiva: Se llama a la función con los punteros ya actualizados.
-    invertirArrRecursivoSimple(ini, fin); }
-*/
 
 int main()
 {
@@ -76,17 +46,9 @@ int main()
 
     invertirArr(arr, arr+tam-1);
     ImprimirArr(arr, tam);
-    invertirArrRe(arr, arr+tam-1);
+    reverseArray(arr, arr+tam-1);
     ImprimirArr(arr, tam);
 
-/*
-    ImprimirArr(arr, tam);
-    invertirPtr(arr, arr+tam-1);
-    ImprimirArr(arr, tam);
-
-    invertirArrRecursivoSimple(numeros, numeros + tam - 1);
-    cout << "Invertido con recursivo alternativo: ";
-    ImprimirArr(numeros, tam);  */
 /* TAMBIEN PUEDE SER ASI SIN FUNCIONES
     int *ptrIni = &arr[0];
     int *ptrFin = &arr[tam-1];
