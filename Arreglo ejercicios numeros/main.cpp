@@ -49,15 +49,12 @@ int main() {
     int noPrimos_idx = 0;
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 10; j++) {
-            if (primos_idx < countPrimos) {
-                matrizOrdenada[i][j] = primos[primos_idx];
-                primos_idx++;
-            } 
-  
-            else if (noPrimos_idx < countNoPrimos) {
-                matrizOrdenada[i][j] = noPrimos[noPrimos_idx];
-                noPrimos_idx++;
-            } } }
+            if (primos_idx < countPrimos) 
+                matrizOrdenada[i][j] = primos[primos_idx++];
+            
+            else if (noPrimos_idx < countNoPrimos) 
+                matrizOrdenada[i][j] = noPrimos[noPrimos_idx++];
+            } } 
 
     cout << endl << "Nueva Matriz : " << endl;
     for (int i = 0; i < 10; i++) {
