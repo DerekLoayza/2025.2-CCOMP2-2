@@ -45,13 +45,19 @@ int main() {
     ordenarDesc(primos, countPrimos);
     ordenarDesc(noPrimos, countNoPrimos);
 
-    int idx = 0;
-    for (int i = 0; i < countPrimos; i++) {
-        matrizOrdenada[idx / 10][idx % 10] = primos[i];
-        idx++;  }
-    for (int i = 0; i < countNoPrimos; i++) {
-        matrizOrdenada[idx / 10][idx % 10] = noPrimos[i];
-        idx++;  }
+    int primos_idx = 0;
+    int noPrimos_idx = 0;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (primos_idx < countPrimos) {
+                matrizOrdenada[i][j] = primos[primos_idx];
+                primos_idx++;
+            } 
+  
+            else if (noPrimos_idx < countNoPrimos) {
+                matrizOrdenada[i][j] = noPrimos[noPrimos_idx];
+                noPrimos_idx++;
+            } } }
 
     cout << endl << "Nueva Matriz : " << endl;
     for (int i = 0; i < 10; i++) {
