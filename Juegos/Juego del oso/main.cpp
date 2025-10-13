@@ -28,7 +28,6 @@ void colocar(int f, int c, char letra) {
     *(fila + c) = letra;
 }
 
-
 int contarOsos() {
     int count = 0;
     char* inicio = &tablero[0][0];
@@ -72,6 +71,8 @@ bool estaLleno() {
         } }
     return true;
 }
+
+
 
 int main() {
     inicializar();
