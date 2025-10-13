@@ -16,7 +16,7 @@ using namespace std;
 
 
 //Implemente una funcion para invertir los elementos de un arr con punteros
-   int invertir(int *inicio, int *final){
+   void invertir(int *inicio, int *final){
     while(inicio<final){
       intercambio(inicio,final);
       inicio++;
