@@ -24,8 +24,10 @@ int contarCarac(char *ptr, int car){
     return cont;}
 //Dame una funcion para ver si es palindromo
 void palindromo(char *inicio) {
-    char *fin = inicio;
-    while (*(fin + 1)) fin++;     // mover 'fin' al final
+    char *fin = inicio
+    while (*(fin + 1)) 
+        fin++;
+    
     while (inicio < fin) {
         if (*inicio != *fin) {
             cout << "No es palindromo";
