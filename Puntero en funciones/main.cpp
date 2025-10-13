@@ -16,13 +16,12 @@ using namespace std;
 
 
 //Implemente una funcion para invertir los elementos de un arr con punteros
-    void invertirArr(int *ini, int *fin) {
-    while (ini < fin) {
-        int ayuda = *ini;
-        *ini = *fin;
-        *fin = ayuda;
-        ini++;
-        fin--; } }
+   int invertir(int *inicio, int *final){
+    while(inicio<final){
+      intercambio(inicio,final);
+      inicio++;
+      final--; }
+}
     //Lo mismo pero recursivamente
     void reverseArray(int *ini, int *fin) {
     if (ini >= fin)  
@@ -44,7 +43,7 @@ int main()
     intercambio(&x,&y);
     cout << "x = " << x << endl << "y = " << y << endl;
 
-    invertirArr(arr, arr+tam-1);
+    invertir(arr, arr+tam-1);
     ImprimirArr(arr, tam);
     reverseArray(arr, arr+tam-1);
     ImprimirArr(arr, tam);
