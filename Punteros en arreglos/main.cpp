@@ -17,17 +17,16 @@ void reverseArray(int *ini, int *fin) {
         fin--;
     } }
 
-void bubblesort(int *arr, int size) {
-    int *ptr = arr;
-    for(int i = 0; i < size; i++) {
-        for(ptr = arr; ptr < arr+size-i-1; ptr++) {
-            if(*ptr > *(ptr+1)) {
-                int tmp = *ptr;
-                *ptr = *(ptr+1);
-                *(ptr+1) = tmp;
-            }}}}
- /*Implemente una función que reciba un arreglo de enteros y su
- tamaño y duplique todos los elementos del arreglo  */
+void burbuja(int *arr, int size){
+    for(int i=0; i<size;i++){
+      for(int j=0; j<size-i-1;j++){
+        if (arr[j]>arr[j+1]){ // O if (*(arr + j) > *(arr + j + 1))
+          int ayuda=arr[j];
+          arr[j]=arr[j+1];
+          arr[j+1]=ayuda;
+          } } } }
+ /*Implemente una funciÃ³n que reciba un arreglo de enteros y su
+ tamaÃ±o y duplique todos los elementos del arreglo  */
 void duplicateElems(int *arr, int tam) {
     for(int i = 0; i < tam; i++) {
         *(arr+i) *= 2;
@@ -77,7 +76,7 @@ int main() {
     cout << endl ;
     impArrPun(arreglo, size);
     cout << endl ;
-    bubblesort(arreglo, size);
+    burbuja(arreglo, size);
     impArrPun(arreglo, size);
     cout << endl ;
     duplicateElems(arreglo, size);
