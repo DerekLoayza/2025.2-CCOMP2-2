@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1761914471 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.3 clases con arrays\main.cpp
+	<iostream>
+	"IntegerArray.h"
+
+1761914465 d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.3 clases con arrays\include\integerarray.h
+	<iostream>
+
+1761914476 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.3 clases con arrays\src\integerarray.cpp
+	"IntegerArray.h"
+
