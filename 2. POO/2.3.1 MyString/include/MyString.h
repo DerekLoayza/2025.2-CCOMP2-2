@@ -5,12 +5,18 @@
 class MyString
 {
     public:
-        MyString();
-        virtual ~MyString();
+        MyString(char *data);
+        int getSize()const;
+        char *getData()const;
 
-    protected:
+        void toUpper();
+        void toLower();
+
+        ~MyString();
 
     private:
+        int size;
+        char *data;
 };
 
 #endif // MYSTRING_H

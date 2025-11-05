@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1762347491 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.3.1 mystring\main.cpp
+	<iostream>
+	"MyString.h"
+
+1762346562 d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.3.1 mystring\include\mystring.h
+	<iostream>
+
+1762347087 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.3.1 mystring\src\mystring.cpp
+	"MyString.h"
+

@@ -5,6 +5,10 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
-}
+    MyString prueba("CIENCIA");
+    cout << prueba.getSize()<<endl;
+    cout << prueba.getData()<<endl;
+    prueba.toLower();
+    cout << prueba.getData()<< endl;
+
+    return 0;}

@@ -9,9 +9,9 @@ class IntegerArray
         IntegerArray(int size);
         void setData (int val, int idx);
         int getData(int idx) const;
-        int getSize() const; //
+        int getSize() const;
         void print() const;
-        virtual ~IntegerArray();
+        ~IntegerArray();
     private:
         int size;
         int *data;
