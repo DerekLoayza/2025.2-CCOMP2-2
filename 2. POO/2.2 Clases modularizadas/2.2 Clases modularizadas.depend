@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1762953686 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.2 clases modularizadas\main.cpp
+	<iostream>
+	"Punto.h"
+	"VectorGeometrico.h"
+
+1762953686 d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.2 clases modularizadas\include\punto.h
+	<iostream>
+
+1762953686 d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.2 clases modularizadas\include\vectorgeometrico.h
+	<cmath>
+	"Punto.h"
+
+1762953686 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.2 clases modularizadas\src\punto.cpp
+	"Punto.h"
+
+1762953692 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.2 clases modularizadas\src\vectorgeometrico.cpp
+	"VectorGeometrico.h"
+
