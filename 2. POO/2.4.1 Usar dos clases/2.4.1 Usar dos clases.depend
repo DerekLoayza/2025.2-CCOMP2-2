@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1763123903 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.4.1 usar dos clases\src\point.cpp
+	"Point.h"
+
+1763123903 d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.4.1 usar dos clases\include\point.h
+	<iostream>
+

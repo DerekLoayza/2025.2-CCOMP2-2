@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1763123608 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.4 array dinamico\main.cpp
+	<iostream>
+	"DynamicIntegerArray.h"
+
+1763123608 d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.4 array dinamico\include\dynamicintegerarray.h
+	<iostream>
+
+1763123606 source:d:\ccomp2-2\2025.2-ccomp2-2\2. poo\2.4 array dinamico\src\dynamicintegerarray.cpp
+	"DynamicIntegerArray.h"
+
