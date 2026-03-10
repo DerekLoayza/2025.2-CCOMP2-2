@@ -8,10 +8,10 @@ int main()
     short num2=10;
     int num3=10;
     float num4=10;
-    double num5=10;
-    long long num6=10;
+    double num5=10; //Ocupa 8 bytes, tambien sirve para decimal
+    long long num6=10; //ocupa 8 bytes, pero solo es para enteros
     long double num7=10;
-    cout << sizeof(num1) << endl; // El sizeof sirve para ver el tamaño de una variable
+    cout << sizeof(num1) << endl; // El sizeof sirve para ver el tamaÃ±o de una variable
     cout << sizeof(num2) << endl;
     cout << sizeof(num3) << endl;
     cout << sizeof(num4) << endl;
