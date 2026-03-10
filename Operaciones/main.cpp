@@ -37,8 +37,8 @@ int main()
 
 //Porgrama que devuelve x digitos de un numero
     int val=1027;
-    int result1=val % 10; //Devuelve el ultimo digito (Aumentale un 0 y devuelve mas digitos) {%100 = 27}
-    int result2=val / 100;//Devuelve los demas digitos (Aumentale un 0 y redices los digitos)
+    int result1=val % 10; //Devuelve el ultimo digito (Aumentale un 0 y devuelve mas digitos) %10=7   {%100 = 27}
+    int result2=val / 10;//Devuelve los demas digitos (Aumentale un 0 y redices los digitos)  /10=102 {%100 = 10}
     cout << "El resultado es: " << result1 << endl;
     cout << "El resultado 2 es: " << result2 << endl;
 //Programa que pide un numero y devuelve ese numero en forma vertical (Estudiar)
@@ -52,5 +52,6 @@ int main()
     cout <<  num%10 << endl;
     return 0;
 }
+
 
 
