@@ -28,7 +28,8 @@ int main()
     cout << "El valor es: " << val2 <<endl;
     val2=val2+1;
     cout << "El valor es: " << val2 <<endl;
-    unsigned short val3=32767; //Aca no se porque se pone el unsigned pero supera el limite de short
+    unsigned short val3=32767; //Unsigned significa sin signo, como su valor maximo es de -32768 a 32767, si le colocamos eso se duplica su valor. O sea aca seria desde 0 a 65,535
+    //En pocas palabras, le dices que no tiene signo, o sea que no hay negativos, 
     cout << "El valor es: " << val3 <<endl;
     val3=val3+1;
     cout << "El valor es: " << val3 <<endl;
