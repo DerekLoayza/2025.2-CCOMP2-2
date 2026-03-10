@@ -10,9 +10,8 @@ int main()
     multi *
     divi /
     modulo %
-    
-ESTO NO SE PORQUE NO FUNCIONA CUANDO LE QUITO EL COMENTARIO
-//*Programa que muestra las operaciones de 2 numeros
+  */
+//Programa que muestra las operaciones de 2 numeros
     int num1=20;
     float num2=8;
     int suma=num1+num2;
@@ -24,20 +23,22 @@ ESTO NO SE PORQUE NO FUNCIONA CUANDO LE QUITO EL COMENTARIO
     cout << "El resultado de tu resta es: " << resta <<endl;
     cout << "El resultado de tu multiplicacion es: " << multiplicacion <<endl;
     cout << "El resultado de tu division es: " << division <<endl;
-    */
+
+
+
 //*Programa que pide 2 numeros e indica cual es el mayor
     int numero1=0, numero2=0;
     cout << "Dame dos numeros" << endl;
     cin >> numero1 >> numero2;
     if (numero1 > numero2){
-        cout <<"El primero numero es el mayor";
-    }
+        cout <<"El primero numero es el mayor"<< endl;}
     else
-        cout <<"El segundo numero es el mayor";
-/
-    int a=102;
-    int result1=val % 10;
-    int result2=val / 10;
+        cout <<"El segundo numero es el mayor"<< endl;
+
+//Porgrama que devuelve x digitos de un numero
+    int val=1027;
+    int result1=val % 10; //Devuelve el ultimo digito (Aumentale un 0 y devuelve mas digitos) {%100 = 27}
+    int result2=val / 100;//Devuelve los demas digitos (Aumentale un 0 y redices los digitos)
     cout << "El resultado es: " << result1 << endl;
     cout << "El resultado 2 es: " << result2 << endl;
 //Programa que pide un numero y devuelve ese numero en forma vertical (Estudiar)
